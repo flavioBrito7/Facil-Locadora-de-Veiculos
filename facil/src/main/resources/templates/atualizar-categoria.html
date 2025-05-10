@@ -13,36 +13,48 @@
     <header th:insert="navbar_2.html"></header> 
 
     <main>
-        <form id="formAtCategoria" th:action="@{/salvarCategoria}" th:object="${categoria}" method="post">
+        <container>
+            <form id="formAtCategoria" th:action="@{/salvarCategoria}" th:object="${categoria}" method="post">
 
-            <div class="form-group col-md-6 offset-md-3" style="margin-top: 3%;">
-                <div class="col-12">
-                    <h3 class="display-6">Atualizar Categoria</h3>
+                <div class="form-group col-md-6 offset-md-3" style="margin-top: 6%;">
+                    <div class="col-12">
+                        <h3>Atualizar Categoria</h3>
+                    </div>                                        
                 </div>
-                <div class="col-12"  style="text-align: right">
-                    <button type="submit" class="btn btn-primary">Atualizar</button>
-                </div>                              
-            </div>
 
-            <div class="form-group col-md-6 offset-md-3">
-                <input type="hidden" class="form-control"  th:field="*{id}" placeholder="">
-            </div>
+                <div class="form-group col-md-6 offset-md-3">
+                    <input type="hidden" class="form-control"  th:field="*{id}" placeholder="">
+                </div>
 
-            <div class="form-group col-md-6 offset-md-3">
-                <label for="descricao">Descrição</label>
-                <input type="text" class="form-control"  th:field="*{descricao}" placeholder="">             
-            </div>  
+                <div class="form-group col-md-6 offset-md-3">
+                    <label for="descricao">Descrição</label>
+                    <input type="text" class="form-control"  th:field="*{descricao}" placeholder="">             
+                </div>  
 
-            <div class="form-group col-md-6 offset-md-3">
-                <label for="valor">Valor R$</label>
-                <input type="text" class="form-control"  th:field="*{valor}" placeholder="">          
-            </div>  
+                <div class="form-group col-md-6 offset-md-3">
+                    <label for="valor">Valor R$</label>
+                    <input type="text" class="form-control"  th:field="*{valor}" placeholder="">          
+                </div>  
 
-        </form>
-
-        <div class="form-group col-md-6 offset-md-3" style="text-align: right; margin-top: 1%;">
-            <button type="button" class="btn btn-danger"><a th:href="@{/categorias}" class="dropdown-item" >Voltar</a></button>
-        </div>
+                <div class="col-6"  style="text-align: right">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                            </div>
+                            <div class="col-sm">
+                                <a class="btn btn-outline-secondary" th:href="@{/categorias}" role="button">Voltar para Lista</a>
+                            </div>
+                            <div class="col-sm">
+                            </div>
+                            <div class="col-sm">
+                                <button class="btn btn-primary" type="submit">Atualizar Categoria</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>     
+                
+            </form>
+        </container>
     </main>
 
     <script src="/js/main.js"></script>

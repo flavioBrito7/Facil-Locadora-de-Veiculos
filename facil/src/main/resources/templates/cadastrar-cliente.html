@@ -13,7 +13,7 @@
 
     <header th:insert="navbar_2.html"></header> 
 
-    <main class="main-form">
+    <main>
         <container>
             <form id="formCadCliente" th:action="@{/salvarCliente}" th:object="${cliente}" method="post">
 
@@ -61,6 +61,7 @@
                     <label for="email">E-mail</label>
                     <input type="text" class="form-control"  th:field="*{email}" placeholder="seuemail@provedor.com">
                 </div>
+                
                 <p>  <p>
                 <div class="col-6"  style="text-align: right">
                     <div class="container">

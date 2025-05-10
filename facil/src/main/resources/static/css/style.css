@@ -4,20 +4,11 @@
     font-size: 12px;
 }
 
-/*body {
-    background-color: #d9c3d8;
-    height: 100vh;
-}*/
-
 .navbar-brand{
     margin-left: 5%;
     padding: 10px;
     font-size: 23px;
     color: #4C1F70;
-}
-
-titulo-index {
-    
 }
 
 h1 {
@@ -40,32 +31,6 @@ form{
     padding-top: 2%;
 }
 
-.form-login {
-    width: 25%;
-    margin-top: 2%;
-    background-color: #430F43;
-    display: inline-block;
-    flex-flow: column wrap;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.form-login label {
-    font-size: 20px;
-    color: #DDD0C8;
-}
-
-.btn-login-acessar, .btn-login-sair  {
-    width: 100%;
-    height: 45px;
-    margin-top: 15%;
-    text-align: center;
-    background-color: #430F43;
-    color:#C9ADC6;
-    border-radius: 5px;
-    border-color: #FFFFFF;
-    border-width: 1px;
-}
 
 header {
       height: 6vh;
@@ -74,11 +39,6 @@ header {
 main {
     height: 80vh;
     background-color: #d9c3d8;
-}
-
-.container-form {
-    justify-content: center;
-    align-items: center;
 }
 
 footer {
