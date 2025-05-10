@@ -1,0 +1,9 @@
+{
+    "elements": {},
+    "attributes": {
+        "th:insert": {
+            "context": "header"
+        },
+        "th:href": {}
+    }
+}

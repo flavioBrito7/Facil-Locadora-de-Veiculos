@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns="w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>CADASTRAR FUNCIONÁRIO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" th:href="@{/css/style.css}" /> 
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
+    </head>
+
+    <header th:insert="navbar_2.html"></header> 
+
+    <main>
+        <container class="container-form">
+            <form id="formCadFunc" th:action="@{/salvarFuncionario}" th:object="${funcionario}" method="post">
+
+                <div class="form-group col-md-6 offset-md-3" style="margin-top: 3%;">
+                    <div class="col-12">
+                        <h3>Cadastrar Novo Funcionário</h3>
+                    </div>                       
+                </div>
+
+                <div class="form-group col-md-6 offset-md-3">
+                    <input type="hidden" class="form-control"  th:field="*{id}" placeholder="">
+                </div>
+
+                <div class="form-group col-md-6 offset-md-3">
+                    <label for="nome">Nome</label>
+                    <input type="text" name="nome" class="form-control" th:field="*{nome}">
+
+                </div>
+                <div class="form-group col-md-6 offset-md-3">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" class="form-control" th:field="*{cpf}">
+
+                </div>
+                <div class="form-group col-md-6 offset-md-3">
+                    <label for="identidade">Identidade</label>
+                    <input type="text" name="identidade" class="form-control" th:field="*{identidade}">
+
+                </div>           
+                <div class="form-group col-md-6 offset-md-3">
+                    <label for="contato">Contato</label>
+                    <input type="text" id="contato" name="contato" class="form-control"  th:field="*{contato}" placeholder="">
+
+                </div>
+                <div class="form-group col-md-6 offset-md-3">
+                    <label for="endereco">Endereco</label>
+                    <input type="text" name="endereco" class="form-control"  th:field="*{endereco}" placeholder="">
+
+                </div>
+                <div class="form-group col-md-6 offset-md-3">
+                    <label for="cargo">Cargo</label>
+                    <input type="text" name="cargo" class="form-control"  th:field="*{cargo}" placeholder="">
+                </div>
+
+                <p><p>
+                <div class="col-6"  style="text-align: right">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm">
+                            </div>
+                            <div class="col-sm">
+                                <a class="btn btn-outline-secondary" th:href="@{/funcionarios}" role="button">Voltar para Lista</a>
+                            </div>
+                            <div class="col-sm">
+                            </div>
+                            <div class="col-sm">
+                                <button class="btn btn-primary" type="submit">Cadastrar Aluguel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>              
+            </form>
+        </container>
+    </main>
+
+    <script>
+        $(document).ready(function () {
+            $('#cpf').mask('000.000.000-00', {placeholder: '000.000.000-00'});
+            $('#contato').mask('(00) 00000-0000', {placeholder: '(00) 00000-0000'});
+        });
+    </script>
+
+    <script src="/js/main.js"></script>
+
+    <footer th:insert="rodape.html"></footer> 
+
+</html>
+
