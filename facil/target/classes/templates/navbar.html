@@ -1,0 +1,168 @@
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FÁCIL LOCADORA DE VEÍCULOS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                <!--  ******************************************************************************************************************************************** Início de todos os MÓDULOS-->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                    <!--  ***************************************************************************************************************************************** Início do MÓDULO SUPORTE-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SUPORTE
+                        </a>
+                        <!-- ************************************************************************************************************************************** Início do menu do SUPORTE-->
+                        <ul class="dropdown-menu">
+                            <li class="dropstart">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Contatos</a>
+                                <ul class="dropdown-menu">
+                                    <li><a  class="dropdown-item">0800 9999-0805 - Erro na conexão com a base de dados</a></li>  
+                                    <li><a  class="dropdown-item">0800 9999-0806 - Erro no acesso ao sistema</a></li> 
+                                    <li><a  class="dropdown-item">0800 9999-0807 - Cadastro/Exclusão de usuários</a></li> 
+                                </ul>
+                            </li>                    
+                        </ul>
+                        <!-- ************************************************************************************************************************************** Fim do menu do SUPORTE-->
+                    </li>
+                    <!--  **************************************************************************************************************************************** Fim do MÓDULO SUPORTE-->
+
+                    <!--  **************************************************************************************************************************************** Início do MÓDULO VENDAS-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            MÓDULO VENDAS
+                        </a>
+                        <!-- ************************************************************************************************************************************** Início do menu do MÓDULO VENDAS-->
+                        <ul class="dropdown-menu">
+
+                            <!--  ********************************************************************************************************************************* Início do dropdown Clientes-->
+                            <li class="dropstart">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Clientes</a>                
+                                <ul class="dropdown-menu">
+                                    <li><a th:href="@{clientes}" class="dropdown-item" >Listar</a></li>  
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a th:href="@{/criarClienteForm}" class="dropdown-item">Cadastrar</a></li>
+                                </ul>
+                            </li>  
+                            <!--  ******************************************************************************************************************************** Fim do dropdown Clientes-->
+
+                            <li><hr class="dropdown-divider"></li>
+
+                            <!--  ******************************************************************************************************************************** Início do dropdown Aluguéis-->
+                            <li class="dropstart">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Aluguéis</a>
+                                <ul class="dropdown-menu">
+                                    <li><a th:href="@{alugueisAtivos}" class="dropdown-item" >Listar</a></li>  
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a th:href="@{/criarAluguelForm}" class="dropdown-item">Cadastrar</a></li>
+                                </ul>
+                            </li>
+                            <!--  ******************************************************************************************************************************** Fim do dropdown Aluguéis-->
+                        </ul>
+                        <!--  *************************************************************************************************************************************** Fim do menu do MÓDULO VENDAS-->      
+                    </li>
+                    <!--  *************************************************************************************************************************************** Fim do MÓDULO VENDAS-->
+
+
+                    <!--  *************************************************************************************************************************************** Início do MÓDULO ADMINISTRATIVO-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            MÓDULO ADMINISTRATIVO
+                        </a>
+                        <!-- *********************************************************************************************************************************** Início do menu do MÓDULO ADMINISTRATIVO-->
+                        <ul class="dropdown-menu">
+
+                            <!--  ******************************************************************************************************************************** Início do dropdown Aluguéis-->
+                            <li class="dropstart">
+
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Aluguéis</a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a th:href="@{alugueis}" class="dropdown-item" >Listar Todos</a></li>  
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a th:href="@{/alugueisAtivos}" class="dropdown-item" >Listar Ativos</a></li>  
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a th:href="@{/alugueisEncerrados}" class="dropdown-item" >Listar Encerrados</a></li>  
+                                </ul>
+
+                            </li>
+                            <!--  ******************************************************************************************************************************** Fim do dropdown Aluguéis-->
+
+                            <li><hr class="dropdown-divider"></li>
+
+                            <!--  ******************************************************************************************************************************** Início do dropdown Categorias-->
+                            <li class="dropstart">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Categorias</a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a th:href="@{categorias}" class="dropdown-item">Listar</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a th:href="@{/criarCategoriaForm}" class="dropdown-item">Cadastrar</a></li>
+                                </ul>                      
+                            </li>  
+                            <!--   ******************************************************************************************************************************** Fim do dropdown Categorias-->     
+
+                            <li><hr class="dropdown-divider"></li>
+
+                            <!--  ******************************************************************************************************************************** Início do dropdown Veículos-->
+                            <li class="dropstart">
+                                <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Veículos</a>
+
+                                <ul class="dropdown-menu">
+                                    <li><a th:href="@{veiculos}" class="dropdown-item">Listar</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a th:href="@{/criarVeiculoForm}" class="dropdown-item">Cadastrar</a></li>
+                                </ul>                     
+                            </li>
+                            <!--  ******************************************************************************************************************************** Fim do dropdown Veículos-->
+
+                            <li><hr class="dropdown-divider"></li>
+
+                            <!--  ********************************************************************************************************************************* Início do dropdown RH-->
+                            <li class="dropstart">
+
+                                <a class="dropdown-item dropdown-toggle" data-bs-auto-close="outside" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">RH</a>
+
+                                <!-- ***************************************************************************************************************************** Início do menu RH-->   
+                                <ul class="dropdown-menu">   <!-- Início do menu RH-->   
+
+                                    <!-- ************************************************************************************************************************* Início do dropdown Funcionarios--> 
+                                    <li class="dropstart"> 
+                                        <a class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown" href="#">Funcionários</a>
+                                        <ul class="dropdown-menu">
+                                            <li><a th:href="@{funcionarios}" class="dropdown-item" >Listar</a></li>  
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li><a th:href="@{/criarFuncionarioForm}" class="dropdown-item">Cadastrar</a></li>
+                                        </ul>                           
+                                    </li> 
+                                    <!-- *************************************************************************************************************************** Fim do dropdown Funcionarios--> 
+                                </ul> 
+                                <!-- ****************************************************************************************************************************** Fim do menu RH-->                            
+                            </li>
+                            <!-- ******************************************************************************************************************************** Fim do dropdown RH-->                   
+                        </ul>
+                        <!--  ********************************************************************************************************************************** Fim do menu do MÓDULO ADMINISTRATIVO-->                  
+                    </li>
+                    <!--  ************************************************************************************************************************************* Fim do MÓDULO ADMINISTRATIVO-->
+
+                     <!--  **************************************************************************************************************************************** Início do SAIR-->
+                     
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-auto-close="outside" th:href="@{/}" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SAIR DO SISTEMA
+                        </a>
+                        <ul class="dropdown-menu">                                              
+                            <li class="dropstart">
+                                 <a th:href="@{/}" class="dropdown-item" >Página Inicial</a>
+                            </li>                  
+                        </ul>                      
+                    </li>
+                  <!--  **************************************************************************************************************************************** Fim do SAIR-->
+                </ul>
+                <!--  **************************************************************************************************************************************** Fim de todoso os MÓDULOS-->
+            </div>
+        </div>
+    </nav>
